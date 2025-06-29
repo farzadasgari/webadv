@@ -1,8 +1,37 @@
 {
   "name": "webadv",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "description": "webadv",
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "webapp"
+  ],
+  "author": {
+    "name": "Farzad Asgari",
+    "email": "khufarzadasgari@gmail.com",
+    "url": "https://farzadasgari.ir"
+  },
+  "license": "MIT",
+  "homepage": "https://farzadasgari.ir",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farzadasgari/webadv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/farzadasgari/webadv/issues"
+  },
+  "profiles": {
+    "googleScholar": "https://scholar.google.com/citations?user=Rhue_kkAAAAJ&hl=en",
+    "gitHub": "https://github.com/farzadasgari",
+    "x": "https://x.com/farzad_asg",
+    "linkedin": "https://www.linkedin.com/in/farzad-asgari",
+    "researchgate": "https://www.researchgate.net/profile/Farzad-Asgari",
+    "orcid": "https://orcid.org/0009-0008-3800-0408"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -25,5 +54,9 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
     "vite": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }

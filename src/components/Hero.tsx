@@ -1,3 +1,5 @@
+import { Button } from '@/components/ui/button';
+
 interface HeroProps {
     onNavigate: (section: string) => void;
 }
@@ -19,6 +21,22 @@ export const Hero = ({ onNavigate }: HeroProps) => {
                         data using advanced despiking, denoising, and
                         statistical analysis algorithms.
                     </p>
+                    <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                        <Button
+                            size="lg"
+                            onClick={() => onNavigate('upload')}
+                            className="cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800"
+                        >
+                            Start Analyzing Data
+                        </Button>
+                        <Button
+                            variant="outline"
+                            size="lg"
+                            className="cursor-pointer"
+                        >
+                            View Documentation
+                        </Button>
+                    </div>
                 </div>
             </div>
         </section>

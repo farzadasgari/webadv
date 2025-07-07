@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import {Hero} from "@/components/Hero.tsx";
+import { Hero } from '@/components/Hero.tsx';
 const Index = () => {
     const [activeSection, setActiveSection] = useState<string>('home');
     const renderSection = () => {
@@ -20,9 +20,7 @@ const Index = () => {
                 activeSection={activeSection}
                 onNavigate={setActiveSection}
             />
-            <main className="pt-16">
-                {renderSection()}
-            </main>
+            <main className="pt-16">{renderSection()}</main>
             <Footer />
         </div>
     );

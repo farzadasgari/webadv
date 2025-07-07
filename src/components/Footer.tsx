@@ -1,6 +1,6 @@
 import {Button} from "@/components/ui/button";
 import {siGithub} from "simple-icons";
-import {BookOpen, Activity, ExternalLink} from "lucide-react";
+import {BookOpen, Activity, ExternalLink, Mail} from "lucide-react";
 
 export const Footer = () => {
     return (
@@ -60,6 +60,29 @@ export const Footer = () => {
                                 Signal Pollution Rate Research
                             </a>
                         </div>
+                    </div>
+                    <div>
+                        <h4 className="text-lg font-semibold mb-4">Research Team</h4>
+                        <div className="space-y-2 text-slate-300">
+                            <a href="https://scholar.google.com/citations?hl=en&user=Rhue_kkAAAAJ" target="_blank" className="flex items-center text-slate-300 hover:text-white transition-colors">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                Farzad Asgari
+                            </a>
+                            <a href="https://scholar.google.com/citations?hl=en&user=E8PFUBEAAAAJ" target="_blank" className="flex items-center text-slate-300 hover:text-white transition-colors">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                Seyed Hossein Mohajeri
+                            </a>
+                            <a href="https://scholar.google.com/citations?hl=en&user=GwT49LIAAAAJ" target="_blank" className="flex items-center text-slate-300 hover:text-white transition-colors">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                Mojtaba Mehraein
+                            </a>
+                        </div>
+                        <a href="mailto:khufarzadasgari@gmail.com">
+                        <Button variant="outline" size="sm" className="mt-4 cursor-pointer border-slate-600 hover:border-slate-50 text-slate-600 hover:bg-slate-600 hover:text-slate-50">
+                            <Mail className="w-4 h-4 mr-2" />
+                            Contact Team
+                        </Button>
+                        </a>
                     </div>
                 </div>
 

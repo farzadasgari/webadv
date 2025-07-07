@@ -91,6 +91,40 @@ export const Hero = ({ onNavigate }: HeroProps) => {
                         );
                     })}
                 </div>
+                <Card className="border-blue-200 bg-gradient-to-r from-blue-50 to-indigo-50 p-8">
+                    <h2 className="mb-4 text-2xl font-bold text-slate-800">
+                        Powered by ProADV
+                    </h2>
+                    <p className="mb-6 text-slate-700">
+                        Built on the foundation of peer-reviewed algorithms and
+                        research from the original
+                        <a
+                            href="https://github.com/farzadasgari/proadv"
+                            target="_blank"
+                            className="mr-1 ml-1 font-semibold underline transition-colors hover:text-slate-400"
+                        >
+                            ProADV
+                        </a>
+                        toolkit, ensuring scientific accuracy and reliability in
+                        your acoustic Doppler velocimeter data analysis.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-600">
+                        <span>
+                            • Kernel Density Estimation (KDE/3d-KDE/m3d-KDE)
+                        </span>
+                        <span>
+                            • Phase-Space Thresholding (PST/mPST/3d-PST)
+                        </span>
+                        <span>• Velocity Correlation (VC)</span>
+                        <span>• Acceleration Thresholding (ACC)</span>
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-600">
+                        <span>• Power Spectra Density (PSD)</span>
+                        <span>• Singular Spectrum Analysis (SSA)</span>
+                        <span>• Kalman</span>
+                        <span>• Moving Averages</span>
+                    </div>
+                </Card>
             </div>
         </section>
     );

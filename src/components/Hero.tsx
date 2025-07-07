@@ -1,4 +1,6 @@
 import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Upload, BarChart3, Eye, FileText } from 'lucide-react';
 
 interface HeroProps {
     onNavigate: (section: string) => void;
@@ -37,6 +39,57 @@ export const Hero = ({ onNavigate }: HeroProps) => {
                             View Documentation
                         </Button>
                     </div>
+                </div>
+                <div className="mb-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                    {[
+                        {
+                            icon: Upload,
+                            title: 'Upload & Manage',
+                            description:
+                                'Upload ADV datasets in multiple formats with validation and preview',
+                            action: () => onNavigate('upload'),
+                        },
+                        {
+                            icon: BarChart3,
+                            title: 'Advanced Analysis',
+                            description:
+                                'Apply sophisticated despiking and denoising algorithms',
+                            action: () => onNavigate('analysis'),
+                        },
+                        {
+                            icon: Eye,
+                            title: 'Visualize Results',
+                            description:
+                                'Interactive charts for time-series, spectral, and statistical analysis',
+                            action: () => onNavigate('visualization'),
+                        },
+                        {
+                            icon: FileText,
+                            title: 'Export & Report',
+                            description:
+                                'Download processed data and generate comprehensive reports',
+                            action: () => {},
+                        },
+                    ].map((feature, index) => {
+                        const Icon = feature.icon;
+                        return (
+                            <Card
+                                key={index}
+                                className="cursor-pointer p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                                onClick={feature.action}
+                            >
+                                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-blue-100 to-indigo-100">
+                                    <Icon className="h-6 w-6 text-blue-600" />
+                                </div>
+                                <h3 className="mb-2 text-lg font-semibold text-slate-800">
+                                    {feature.title}
+                                </h3>
+                                <p className="text-sm text-slate-600">
+                                    {feature.description}
+                                </p>
+                            </Card>
+                        );
+                    })}
                 </div>
             </div>
         </section>

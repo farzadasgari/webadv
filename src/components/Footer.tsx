@@ -1,6 +1,6 @@
 import {Button} from "@/components/ui/button";
 import {siGithub} from "simple-icons";
-import {BookOpen, Activity} from "lucide-react";
+import {BookOpen, Activity, ExternalLink} from "lucide-react";
 
 export const Footer = () => {
     return (
@@ -38,6 +38,27 @@ export const Footer = () => {
                                 <BookOpen className="w-4 h-4 mr-2"/>
                                 Docs
                             </Button>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 className="text-lg font-semibold mb-4">Research Foundation</h4>
+                        <div className="space-y-3">
+                            <a href="https://github.com/farzadasgari/proadv" target="_blank" className="flex items-center text-slate-300 hover:text-white transition-colors">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                Original ProADV Repository
+                            </a>
+                            <a href="https://doi.org/10.1016/j.softx.2024.101868" target="_blank" className="flex items-center text-slate-300 hover:text-white transition-colors">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                ProADV: A toolkit for enhancing water dynamics Research
+                            </a>
+                            <a href="https://doi.org/10.1016/j.measurement.2023.114053" target="_blank" className="flex items-center text-slate-300 hover:text-white transition-colors">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                3d Kernel Density Estimation Filtering Research
+                            </a>
+                            <a href="https://doi.org/10.1016/j.flowmeasinst.2023.102485" target="_blank" className="flex items-center text-slate-300 hover:text-white transition-colors">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                Signal Pollution Rate Research
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Header } from '@/components/Header';
+import {Footer} from '@/components/Footer';
 
 const Index = () => {
     const [activeSection, setActiveSection] = useState<string>('home');
@@ -10,7 +11,7 @@ const Index = () => {
                 onNavigate={setActiveSection}
             />
             <main className="pt-16">{/* render section*/}</main>
-            {/*footer*/}
+            <Footer />
         </div>
     );
 };

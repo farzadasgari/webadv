@@ -1,7 +1,7 @@
 import {Card} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
-import {Users, Award} from "lucide-react";
-import {siGooglescholar, siLogmein} from 'simple-icons';
+import { siGithub, siGooglescholar, siLogmein} from "simple-icons";
+import { ExternalLink, Users, BookOpen, Award } from "lucide-react";
 
 export const Team = () => {
     const teamMembers = [
@@ -91,7 +91,7 @@ export const Team = () => {
                                     variant="outline"
                                     size="sm"
                                     className="cursor-pointer flex-1 bg-background hover:bg-accent"
-                                    onClick={() => window.open(member.scholar, '_blank')}
+                                    onClick={() => window.open(member.scholar, "_blank")}
                                 >
                                     <svg
                                         role="img"
@@ -108,7 +108,7 @@ export const Team = () => {
                                     variant="outline"
                                     size="sm"
                                     className="cursor-pointer flex-1 bg-background hover:bg-accent"
-                                    onClick={() => window.open(member.linkedin, '_blank')}
+                                    onClick={() => window.open(member.linkedin, "_blank")}
                                 >
                                     <svg
                                         role="img"
@@ -143,6 +143,43 @@ export const Team = () => {
                                 </div>
                             </Card>
                         ))}
+                    </div>
+                </div>
+                <div className="bg-white rounded-lg p-8 shadow-sm">
+                    <div className="text-center mb-8">
+                        <h2 className="text-3xl font-bold text-slate-800 mb-4">
+                            Join Our Research Community
+                        </h2>
+                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                            We welcome contributions from researchers, developers, and practitioners in the field of
+                            hydrodynamics and signal processing. Together, we can advance ADV data analysis capabilities.
+                        </p>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <Button className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800"
+                                onClick={() => window.open("https://github.com/farzadasgari/webadv/blob/main/CONTRIBUTING.md", "_blank")}>
+                            <svg
+                                role="img"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-4 h-4 mr-2 fill-current"
+                            >
+                                <title>GitHub</title>
+                                <path d={siGithub.path} />
+                            </svg>
+                            Contribute on GitHub
+                        </Button>
+                        <Button variant="outline" className="bg-background hover:bg-accent"
+                                onClick={() => window.open("https://github.com/farzadasgari/webadv?tab=readme-ov-file#citation", "_blank")}>
+                            <BookOpen className="w-4 h-4 mr-2" />
+                            Read Our Papers
+                        </Button>
+                        <Button variant="outline" className="bg-background hover:bg-accent"
+                                onClick={() => window.open("https://github.com/farzadasgari/proadv", "_blank")}>
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            Visit ProADV Repository
+                        </Button>
                     </div>
                 </div>
             </div>

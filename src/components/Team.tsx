@@ -1,6 +1,6 @@
 import {Card} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
-import {Users} from "lucide-react";
+import {Users, Award} from "lucide-react";
 import {siGooglescholar, siLogmein} from 'simple-icons';
 
 export const Team = () => {
@@ -28,6 +28,24 @@ export const Team = () => {
             expertise: ["Machine Learning", "Pattern Recognition", "Data Mining"],
             scholar: "https://scholar.google.com/citations?user=GwT49LIAAAAJ&hl=en",
             linkedin: "https://ir.linkedin.com/in/mojtaba-mehraein-002a03238",
+        }
+    ];
+    const contributions = [
+        {
+            title: "Core Algorithm Development",
+            description: "Development of advanced despiking algorithms including 3d-KDE and m3d-KDE."
+        },
+        {
+            title: "Signal Processing Innovation",
+            description: "Implementation of novel signal pollution rate calculation and multivariate statistical analysis techniques."
+        },
+        {
+            title: "Open Source Community",
+            description: "Maintaining an active open-source project with comprehensive documentation and community support."
+        },
+        {
+            title: "Research Publications",
+            description: "Publishing peer-reviewed research on ADV data processing and contributing to the scientific community."
         }
     ];
     return (
@@ -106,6 +124,26 @@ export const Team = () => {
                             </div>
                         </Card>
                     ))}
+                </div>
+                <div className="mb-16">
+                    <h2 className="text-3xl font-bold text-slate-800 text-center mb-12">
+                        Our Contributions
+                    </h2>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {contributions.map((contribution, index) => (
+                            <Card key={index} className="p-6">
+                                <div className="flex items-start space-x-4">
+                                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <Award className="w-6 h-6 text-white" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-slate-800 mb-2">{contribution.title}</h3>
+                                        <p className="text-slate-600">{contribution.description}</p>
+                                    </div>
+                                </div>
+                            </Card>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/Hero.tsx';
-import { Team } from "@/components/Team";
+import { Team } from '@/components/Team';
 
 const Index = () => {
     const [activeSection, setActiveSection] = useState<string>('home');
     const renderSection = () => {
         switch (activeSection) {
-            case "team":
+            case 'team':
                 return <Team />;
             default:
                 return (

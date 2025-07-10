@@ -3,11 +3,14 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/Hero.tsx';
 import { Team } from '@/components/Team';
+import { DataUpload } from '@/components/DataUpload';
 
 const Index = () => {
     const [activeSection, setActiveSection] = useState<string>('home');
     const renderSection = () => {
         switch (activeSection) {
+            case "upload":
+                return <DataUpload />;
             case 'team':
                 return <Team />;
             default:

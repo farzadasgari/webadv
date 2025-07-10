@@ -9,7 +9,7 @@ const Index = () => {
     const [activeSection, setActiveSection] = useState<string>('home');
     const renderSection = () => {
         switch (activeSection) {
-            case "upload":
+            case 'upload':
                 return <DataUpload />;
             case 'team':
                 return <Team />;

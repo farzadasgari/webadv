@@ -1,22 +1,25 @@
-import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Hero } from '@/components/Hero.tsx';
-import { Team } from '@/components/Team';
-import { DataUpload } from '@/components/DataUpload';
+import {useState} from 'react';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {Hero} from '@/components/Hero.tsx';
+import {Team} from '@/components/Team';
+import {DataUpload} from '@/components/DataUpload';
+import {Analysis} from '@/components/Analysis';
 
 const Index = () => {
     const [activeSection, setActiveSection] = useState<string>('home');
     const renderSection = () => {
         switch (activeSection) {
             case 'upload':
-                return <DataUpload />;
+                return <DataUpload/>;
             case 'team':
-                return <Team />;
+                return <Team/>;
+            case 'analysis':
+                return <Analysis/>;
             default:
                 return (
                     <>
-                        <Hero onNavigate={setActiveSection} />
+                        <Hero onNavigate={setActiveSection}/>
                     </>
                 );
         }
@@ -28,7 +31,7 @@ const Index = () => {
                 onNavigate={setActiveSection}
             />
             <main className="pt-16">{renderSection()}</main>
-            <Footer />
+            <Footer/>
         </div>
     );
 };

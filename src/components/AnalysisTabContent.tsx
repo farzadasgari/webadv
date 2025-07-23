@@ -24,7 +24,7 @@ interface AnalysisTabContentProps {
             options?: string[];
             min?: number;
             max?: number;
-            default?: any;
+            default?;
         }>;
     }>;
 }

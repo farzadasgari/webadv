@@ -5,6 +5,7 @@ import { Hero } from '@/components/Hero.tsx';
 import { Team } from '@/components/Team';
 import { DataUpload } from '@/components/DataUpload';
 import { Analysis } from '@/components/Analysis';
+import { Visualization } from '@/components/Visualization';
 
 const Index = () => {
     const [activeSection, setActiveSection] = useState<string>('home');
@@ -16,6 +17,8 @@ const Index = () => {
                 return <Team />;
             case 'analysis':
                 return <Analysis />;
+            case 'visualization':
+                return <Visualization />;
             default:
                 return (
                     <>

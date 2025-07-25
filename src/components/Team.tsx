@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { siGithub, siGooglescholar, siLogmein } from 'simple-icons';
-import { ExternalLink, Users, BookOpen, Award } from 'lucide-react';
+import { ExternalLink, BookOpen, Award } from 'lucide-react';
 
 export const Team = () => {
     const teamMembers = [
@@ -14,6 +14,7 @@ export const Team = () => {
                 'Data Analysis',
                 'Algorithm Development',
             ],
+            avatar: '/webadv/team/farzad.jpg',
             scholar:
                 'https://scholar.google.com/citations?user=Rhue_kkAAAAJ&hl=en',
             linkedin: 'https://www.linkedin.com/in/farzad-asgari/',
@@ -27,6 +28,7 @@ export const Team = () => {
                 'Statistical Methods',
                 'Data Validation',
             ],
+            avatar: '/webadv/team/hossein.jpg',
             scholar:
                 'https://scholar.google.com/citations?user=E8PFUBEAAAAJ&hl=en',
             linkedin: 'https://ir.linkedin.com/in/hossein-mohajeri',
@@ -40,6 +42,7 @@ export const Team = () => {
                 'Pattern Recognition',
                 'Data Mining',
             ],
+            avatar: '/webadv/team/mojtaba.jpg',
             scholar:
                 'https://scholar.google.com/citations?user=GwT49LIAAAAJ&hl=en',
             linkedin: 'https://ir.linkedin.com/in/mojtaba-mehraein-002a03238',
@@ -88,8 +91,12 @@ export const Team = () => {
                             className="p-6 transition-shadow hover:shadow-lg"
                         >
                             <div className="mb-4 text-center">
-                                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-700">
-                                    <Users className="h-10 w-10 text-white" />
+                                <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-700">
+                                    <img
+                                        src={member.avatar}
+                                        alt=""
+                                        className="rounded-full object-cover"
+                                    />
                                 </div>
                                 <h3 className="mb-1 text-xl font-bold text-slate-800">
                                     {member.name}
